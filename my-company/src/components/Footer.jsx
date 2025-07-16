@@ -2,7 +2,7 @@ function Footer() {
     return (
         <div>
             <footer>
-                 <p>© 2023 City Lovers</p>
+                 <p>© 2025 ESO Legal</p>
             </footer>
         </div>
     );
