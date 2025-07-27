@@ -3,7 +3,7 @@ import RecipeList from "./components/RecipeList";
 import RecipeDetails from "./components/RecipeDetails";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
-import { Routes, Route, Link } from "react-router-dom";
+import { Router, Routes, Route, Link } from "react-router-dom";
 import RecommendationsList from "./components/RecommendationsList";
 import FavoritesList from "./components/FavoritesList";
 
@@ -18,12 +18,13 @@ function App() {
       <h2>Add a recipe</h2>
       <AddRecipeForm/>
       <SearchBar/>
+    <Router>
     <Routes>
       <Route path="/" element={<div>Welcome to the Recipe App! 🧑‍🍳</div>} />
       <Route path="/recipes" element={<RecipeList/>}/>
       <Route path="/recipe-details" element={<RecipeDetails/>}/>
     </Routes>
-    
+    </Router>
   
 
     </>
