@@ -5,7 +5,7 @@ const DeleteRecipeButton = () => {
     const deleteRecipes = useRecipeStore(state => state.deleteRecipes);
   return (
     <div>
-        <button>Delete Recipe</button>
+        <button onClick={() => deleteRecipes(recipe.name)}>❌ Remove</button>
     </div>
   )
 }
