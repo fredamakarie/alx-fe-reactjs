@@ -21,10 +21,10 @@ const useRecipeStore = create(set => ({
   })),  
 
 
-  editRecipe: (oldName, updatedRecipe) =>
+  editRecipe: (oldName, updateRecipe) =>
     set((state) => ({
       recipes: state.recipes.map((recipe) =>
-        recipe.name === oldName ? updatedRecipe : recipe)
+        recipe.name === oldName ? updateRecipe : recipe)
     })),
 
   favorites: [],  
