@@ -6,10 +6,23 @@ const gitAPI = axios.create({
 });
 
 // Function that accepts a username and fetches user data
-export const fetchUserData = async (username) => {
+export const fetchUserData = async ({username, location, minRepos}) => {
+      let query = '';
+
+  if (username) query += `${username} `;
+  if (location) query += `location:${location} `;
+  if (minRepos) query += `repos:>${minRepos}`;
   try {
-    const response = await gitAPI.get(`/users/${username}`);
-    return response.data;
+    const response = await gitAPI.get('/search/users/', {params:{q:query.trim()}
+  });
+      const detailedUsers = await Promise.all(
+      response.data.items.map(async (user) => {
+        const userDetails = await gitAPI.get(`/users/${user.login}`);
+        return userDetails.data;
+      })
+    );
+
+    return detailedUsers
   } catch (error) {
     console.error("Something went wrong:", error);
     throw error;

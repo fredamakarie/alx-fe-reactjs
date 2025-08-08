@@ -8,12 +8,12 @@ function App() {
   return (
     <>
      <h1 className='text-blue-300 bg-slate-600'><span>GitHub</span> User Search</h1>
-     
+     <Search/>
+
         <Routes>
           <Route/>
         </Routes>
-     <Search/>
-
+     
     </>
   )
 }
