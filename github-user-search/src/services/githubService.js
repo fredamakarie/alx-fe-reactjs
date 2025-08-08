@@ -13,7 +13,7 @@ export const fetchUserData = async ({username, location, minRepos}) => {
   if (location) query += `location:${location} `;
   if (minRepos) query += `repos:>${minRepos}`;
   try {
-    const response = await gitAPI.get('/search/users/', {params:{q:query.trim()}
+    const response = await axios.get('https://api.github.com/search/users?q={query}', {params:{q:query.trim()}
   });
       const detailedUsers = await Promise.all(
       response.data.items.map(async (user) => {

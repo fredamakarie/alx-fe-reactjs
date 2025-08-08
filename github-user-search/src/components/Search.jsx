@@ -19,7 +19,7 @@ const Search = () => {
       });
       setUsers(data);
     } catch (error) {
-      alert("Looks like we can't find the user");
+      alert("Looks like we cant find the user");
     } finally {
       setLoading(false);
     }
