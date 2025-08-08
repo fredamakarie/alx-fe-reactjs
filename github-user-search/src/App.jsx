@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-     <h1 style={{color:'grey', backgroundColor: 'whitesmoke', padding: '2rem'}}><span>GitHub</span> User Search</h1>
+     <h1 className='text-blue-300 bg-slate-600'><span>GitHub</span> User Search</h1>
      
         <Routes>
           <Route/>
