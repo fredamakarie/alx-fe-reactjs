@@ -65,6 +65,7 @@ const Search = () => {
                   alt={`${user.name}'s avatar`}
                   width="100"
                 />
+                <a href={user.html_url} target="_blank" rel="noopener noreferrer"> View Profile</a>
               </div>
             ))}
           </div>

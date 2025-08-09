@@ -9,7 +9,7 @@ const gitAPI = axios.create({
 export const fetchUserData = async ({username, location, minRepos}) => {
       let query = '';
 
-  if (username) query += `${username} `;
+  if (username) query += `${user} `;
   if (location) query += `location:${location} `;
   if (minRepos) query += `repos:>${minRepos}`;
   try {
