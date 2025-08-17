@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "../data.json";
 
 function HomePage() {
   const [recipes, setRecipes] = useState(data);
+
+  useEffect(() => {
+    // Try to fetch updated data (e.g. from /public/data.json or an API)
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setRecipes(data))
+      .catch((err) => {
+        console.error("Error loading data:", err);
+        // If fetch fails, fallback to already loaded localData
+      });
+  }, []);
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100 p-4 text-center">

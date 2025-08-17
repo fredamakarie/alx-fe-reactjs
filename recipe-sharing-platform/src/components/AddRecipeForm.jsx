@@ -5,14 +5,14 @@ import useRecipeStore  from './recipeStore';
     const addRecipe = useRecipeStore(state => state.addRecipe);
     const [title, setTitle] = useState('');
     const [ingredients, setIngredients] = useState('');
-    const [description, setDescription] = useState('');
+    const [preparationsteps, setPreparationSteps] = useState('');
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      addRecipe({ id: Date.now(), title, ingredients, description });
+      addRecipe({ id: Date.now(), title, ingredients, preparationsteps});
       setTitle('');
       setIngredients('');
-      setDescription('');
+      setPreparationSteps('');
     };
 
     return (
@@ -29,9 +29,9 @@ import useRecipeStore  from './recipeStore';
           placeholder="Ingredients"
         />
         <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description"
+          value={preparationsteps}
+          onChange={(e) => setPreparationSteps(e.target.value)}
+          placeholder="Preparation Steps"
         />
         <button type="submit">Add Recipe</button>
       </form>
