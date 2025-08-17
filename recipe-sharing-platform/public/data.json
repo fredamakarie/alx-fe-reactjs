@@ -10,5 +10,11 @@
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
     "image": "https://bellyfull.net/wp-content/uploads/2021/05/Chicken-Tikka-Masala-blog.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Thieboudienne: Senegalese Jollof Rice and Fish",
+    "summary": "Thieboudienne (pronounced ‘Ceebu Jen’ or Chee-boo-Jen) is the National dish of Senegal and is comprised of stewed broken jasmine rice and vegetables served with marinated fish.",
+    "image": "https://i0.wp.com/www.yummymedley.com/wp-content/uploads/2017/05/Thieboudienne-Senegalese-jollof-rice-and-fish.jpg?w=750&ssl=1"
   }
 ]
