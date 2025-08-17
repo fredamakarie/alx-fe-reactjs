@@ -19,7 +19,7 @@ function RecipeDetail() {
   
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100 p-6">
+    <div className="flex flex-col items-center min-h-screen shadow-lg bg-gray-100 p-6">
       <h1 className="text-3xl font-bold mb-4">{recipe.title}</h1>
       <img
         src={recipe.image}
