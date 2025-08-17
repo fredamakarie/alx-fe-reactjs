@@ -17,7 +17,7 @@ function App() {
           Home
         </NavLink>
         <NavLink
-          to="/"
+          to="/addrecipe"
           className={({ isActive }) =>
             isActive ? "text-red-600 font-bold" : "text-gray-700"
           }
